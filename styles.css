@@ -4,16 +4,44 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Roboto', sans-serif;
+  margin: 0px;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #333;
+  color: #222;
 }
+
+nav {
+  display: none;
+}
+
+p {
+  margin-bottom: 0;
+}
+
 h1 {
-  color: blue;
+  margin-top: 0;
+}
+
+.main-container {
+  position: relative;
+  padding: 15px 0px;
+
+  background-color: #fff;
+}
+
+.content {
+  width: 900px;
+  margin: 0px calc((100vw - 900px) / 2);
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: -45px;
+  left: -60px;
+
+  background-color: crimson;
+  border-radius: 50%;
 }
