@@ -95,12 +95,15 @@ button {
 }
 .nav-list.opened > li:nth-child(1) {
   transform: translate(0px);
+  transition-delay: 100ms;
 }
 .nav-list.opened > li:nth-child(2) {
   transform: translate(25px);
+  transition-delay: 400ms;
 }
 .nav-list.opened > li:nth-child(3) {
   transform: translate(50px);
+  transition-delay: 700ms;
 }
 
 button#open {
