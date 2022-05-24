@@ -12,9 +12,14 @@ body {
 }
 
 nav {
-  /* display: none; */
-  position: absolute;
-  top: 100px;
+  position: fixed;
+  top: 800px;
+  margin-left: 15px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
 }
 
 p {
@@ -45,7 +50,7 @@ button {
   padding: 15px 0px;
 
   transform-origin: top left;
-  transition: transform 0.5s linear;
+  transition: transform 500ms linear;
   background-color: #fff;
 }
 .article.rotated {
@@ -60,18 +65,42 @@ button {
 .circle {
   width: 120px;
   height: 120px;
-  position: absolute;
+  position: fixed;
   top: -50px;
   left: -60px;
   z-index: 1;
 
   background-color: crimson;
   border-radius: 50%;
-  transition: all 700ms;
+  transition: transform 500ms linear;
   cursor: pointer;
 }
 .circle.active {
   transform: rotate(-90deg);
+}
+
+.nav-list {
+  margin: 0px;
+  padding: 0px;
+
+  list-style: none;
+  font-size: 18px;
+}
+.nav-list > li {
+  transform: translate(-100px, 0px);
+  transition: transform 500ms linear;
+}
+.nav-list > li:not(:last-child) {
+  margin-bottom: 20px;
+}
+.nav-list.opened > li:nth-child(1) {
+  transform: translate(0px);
+}
+.nav-list.opened > li:nth-child(2) {
+  transform: translate(25px);
+}
+.nav-list.opened > li:nth-child(3) {
+  transform: translate(50px);
 }
 
 button#open {
